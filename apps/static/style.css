@@ -1,0 +1,140 @@
+html {
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(backimg.png);
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0 !important;
+}
+
+.logo_wrapper {
+  width: 100vw;
+  height: 90vh;
+  padding-top: 10vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: auto;
+  width: 300px;
+  height: 150px;
+  background-image: url(logo.png);
+  background-size: 100%;
+  z-index: 50 !important;
+}
+
+.wrapper {
+  width: 90%;
+  height: 90%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: baseline;
+}
+
+.contents_wrapper{
+  width: 230px;
+  height: 40vh;
+  margin: auto auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contents_wrapper input {
+  width: 230px;
+  height: 50px;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+  color: white;
+  z-index: 100 !important;
+}
+
+input::placeholder {
+  font-size: 17px;
+  color: gray;
+}
+
+.contents_wrapper button {
+  width: 180px;
+  height: 40px;
+  margin: 15px auto;
+  border: 1.5px solid white;
+  background-image: url(image\ 4.png);
+  background-size: 100%;
+  color: white;
+  z-index: 100 !important;
+}
+
+.contents_wrapper_2 {
+  width: 230px;
+  height: 40vh;
+  margin: auto auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contents_wrapper_2 input {
+  width: 230px;
+  height: 50px;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+  color: white;
+  z-index: 100 !important;
+}
+
+.contents_wrapper_2 button {
+  width: 180px;
+  height: 40px;
+  margin: 15px auto;
+  border: 1.5px solid white;
+  background-image: url(image\ 4.png);
+  background-size: 100%;
+  color: white;
+  z-index: 100 !important;
+}
+
+.contents_wrapper_3 {
+  width: 230px;
+  height: 40vh;
+  margin: auto auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contents_wrapper_3 button {
+  width: 230px;
+  height: 60px;
+  margin: 10px auto;
+  border: 1.5px solid white;
+  color: white;
+  background-color: transparent;
+  z-index: 100 !important;
+}
+
+.none {
+  display: none;
+}
