@@ -80,7 +80,7 @@ main {
   border: 2px solid white;
 }
 
-.sinnkitoukou_contents img {
+.sinnkitoukou_contents .select_image {
   width: 60vw;
   height: 60vw;
   background-color: gray;
