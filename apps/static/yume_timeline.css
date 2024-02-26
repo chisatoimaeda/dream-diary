@@ -20,7 +20,92 @@ main {
   z-index: 0 !important;
 }
 
-.sinnkitoukou_shadow{
+.userprofile {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50 !important;
+}
+
+.userprofile_wrapper {
+  width: 70vw;
+  height: 140vw;
+  margin: 0;
+  padding: 0;
+  opacity: 1 !important;
+}
+
+.backbutton2_wrapper {
+  width: 70vw;
+  height: 10vw;
+  margin: 0;
+  opacity: 1 !important;
+}
+
+.backbutton2_wrapper p {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  opacity: 1 !important;
+  z-index: 100 !important;
+}
+
+.userprofile_contents {
+  width: 70vw;
+  height: 115vw;
+  margin: 0;
+  background-image: url(image\ 4.png);
+  background-size: 100%;
+  border: 2px solid white;
+}
+
+.userimage {
+  width: 60vw;
+  height: 60vw;
+  background-color: gray;
+  border: 2px solid white;
+  margin: 5vw 5vw 0 5vw;
+  size: 100%;
+}
+
+.userinformation {
+  width: 60vw;
+  height: 15vw;
+  background-color: transparent;
+  border: 1px solid gray;
+  margin: 5vw 5vw 0 5vw;
+  padding: 0;
+  text-align: center;
+}
+
+input::placeholder {
+  font-size: 17px;
+  color: gray;
+}
+
+.henkou_button {
+  width: 70vw;
+  height: 10vw;
+  margin: 5vw 0 0 0;
+  border: 2px solid white;
+  background-image: url(image\ 4.png);
+  color: white;
+  font-size: 20px;
+}
+
+.sinnkitoukou_shadow {
   width: 100vw;
   height: 100vh;
   background-color: black;
@@ -66,7 +151,7 @@ main {
   margin: 0;
   color: white;
   font-weight: bold;
-  position:absolute;
+  position: absolute;
   opacity: 1 !important;
   z-index: 100 !important;
 }
@@ -75,7 +160,7 @@ main {
   width: 70vw;
   height: 115vw;
   margin: 0;
-  background-image: url(image\ 4.png);
+  background-image: url(Frameimg.png);
   background-size: 100%;
   border: 2px solid white;
 }
@@ -116,7 +201,7 @@ main {
   align-items: center;
 }
 
-.wrapper2  {
+.wrapper2 {
   width: 90vw;
   height: 90vh;
   border: 1px solid white;
@@ -124,7 +209,7 @@ main {
   justify-content: center;
 }
 
-.wrapper3  {
+.wrapper3 {
   width: 80vw;
   height: 90vh;
 }
@@ -274,7 +359,7 @@ main {
   flex-direction: column;
 }
 
-.extrabutton_title{
+.extrabutton_title {
   width: 38vw;
   height: 70vw;
   display: flex;
@@ -321,6 +406,7 @@ main {
 }
 
 .settei {
+  z-index: 100;
   width: 6vh;
   height: 6.5vh;
   background-image: url(Icon.png);

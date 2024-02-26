@@ -3,14 +3,15 @@ from flask import Flask, render_template, request, redirect, url_for
 # from flask_migrate import Migrate
 import os
 from werkzeug.utils import secure_filename
-import datetime
+import random
+# import datetime
 
 
 app = Flask(__name__)
 
 # 投稿できる数は10個で固定とする
 post_num = 0
-post_contents = [{'image_name': "", 'description': 'N/A', 'username': 'N/A'} for _ in range(10)]
+post_contents = [{'image_name': "", 'comment': 'N/A', 'username': 'N/A'} for _ in range(10)]
 
 
 # app.config.from_pyfile('settings.py')
@@ -22,23 +23,37 @@ post_contents = [{'image_name': "", 'description': 'N/A', 'username': 'N/A'} for
 
 @app.route('/')
 def home():
-    return render_template('yume_timeline.html', post_contents=post_contents, post_num=post_num)
+    return render_template('home.html')
+
+
+# def random_order_index(num, registered):
+#     ls = random.sample(range(num), num)
+#     ls2 = []
+#     for n in ls:
+#         if n < registered:
+#             ls2.append()
+
+
+@app.route('/personal')
+def personal():
+    random_numbers = random.sample(range(10), 10)
+    return render_template('yume_timeline.html', post_contents=post_contents, post_num=post_num, rnumbers=random_numbers)
 
 
 # @app.route('/', methods=["POST"])
 # def post():
 #     global post_num, post_contents
-#     post_contents[post_num]['description'] = request.form.get('description')
+#     post_contents[post_num]['comment'] = request.form.get('comment')
 #
 #     # 投稿ボタンが押された時の処理(画像生成)
 #     # img = 画像生成処理
 #     # post_contents[post_num]['image'] = img
-#     # print(post_contents[post_num]['description'])
+#     # print(post_contents[post_num]['comment'])
 #     post_num += 1
 #     return redirect('/')
 
 
-@app.route('/upload', methods=["POST"])
+@app.route('/personal/upload', methods=["POST"])
 def upload():
     global post_num, post_contents
 
@@ -48,30 +63,30 @@ def upload():
     file_path = os.path.join('static/', file_name)
     file.save(file_path)
     post_contents[post_num]['image_name'] = file_name
-    print(post_contents[post_num]['image_name'])
+    # print(post_contents[post_num]['image_name'])
 
     # 投稿した文章に対する処理
-    post_contents[post_num]['description'] = request.form.get('description')
+    post_contents[post_num]['comment'] = request.form.get('comment')
 
     # 投稿ボタンが押された時の処理(画像生成)
     # img = 画像生成処理
     # post_contents[post_num]['image'] = img
-    # print(post_contents[post_num]['description'])
+    # print(post_contents[post_num]['comment'])
 
     post_num += 1
-    return redirect('/')
+    return redirect('/personal')
 
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        input_username = request.form.get('input_username')
-        input_email = request.form.get('input_email')
-        if input_username == "admin" and input_email == "abcd1234":
-            return redirect(url_for("https://www.google.co.jp/"))
-        else:
-            return render_template('login.html', message="Login failure. Please try again.")
-    return render_template('home.html')
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     if request.method == 'POST':
+#         input_username = request.form.get('input_username')
+#         input_email = request.form.get('input_email')
+#         if input_username == "admin" and input_email == "abcd1234":
+#             return redirect(url_for("https://www.google.co.jp/"))
+#         else:
+#             return render_template('login.html', message="Login failure. Please try again.")
+#     return render_template('home.html')
 
 
 # @app.route('/<username>')

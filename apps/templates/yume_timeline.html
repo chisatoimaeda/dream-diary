@@ -17,12 +17,12 @@
         </div>
         <div class="sinnkitoukou_contents">
 <!--          <img href="">-->
-          <form action="/upload" method="POST" enctype="multipart/form-data">
+          <form action="/personal/upload" method="POST" enctype="multipart/form-data">
             <div class="select_image">
               <label for="file">アップロード</label>
               <input type="file" name="file">
             </div>
-            <textarea name="description"></textarea>
+            <textarea name="comment"></textarea>
             <button type="submit" class="sinnkitoukou_button">
               投稿する
             </button>
@@ -34,8 +34,8 @@
       <div class="wrapper2">
         <div class="wrapper3">
           <div class="contents_top">
-            <a class="other">ほかの夢</a>
-            <a class="my">自分の夢</a>
+            <a class="other">おすすめ順</a>
+            <a class="my">更新順</a>
           </div>
           <div class="contents">
 
@@ -44,7 +44,7 @@
 <!--              <div class="content1_wrapper">-->
 <!--                <div class="content1_wrapper2">-->
 <!--                  <img class="content1_img" href="">-->
-<!--                  <p class="content1_text">{{ post['description'] }}</p>-->
+<!--                  <p class="content1_text">{{ post['comment'] }}</p>-->
 <!--                  <div class="content1_user">-->
 <!--                    <img class="content1_userimg">-->
 <!--                    <p class="content1_username">ユーザーネーム</p>-->
@@ -58,8 +58,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[0]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[0]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[0]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[0]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -70,8 +70,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[1]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[1]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[1]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[1]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -82,8 +82,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[2]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[2]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[2]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[2]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -94,8 +94,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[3]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[3]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[3]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[3]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -106,8 +106,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[4]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[4]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[4]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[4]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -118,8 +118,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[5]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[5]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[5]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[5]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -130,8 +130,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[6]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[6]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[6]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[6]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -142,8 +142,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[7]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[7]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[7]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[7]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -154,8 +154,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[8]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[8]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[8]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[8]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -166,8 +166,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[9]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[9]['description'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[9]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[9]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -181,7 +181,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[0]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[0]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[0]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -193,7 +193,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[1]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[1]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[1]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -205,7 +205,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[2]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[2]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[2]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -217,7 +217,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[3]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[3]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[3]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -229,7 +229,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[4]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[4]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[4]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -241,7 +241,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[5]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[5]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[5]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -253,7 +253,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[6]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[6]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[6]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -265,7 +265,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[7]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[7]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[7]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -277,7 +277,7 @@
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
                   <img class="content1_img" src="{{ url_for('static', filename=post_contents[8]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[8]['description'] }}</p>
+                  <p class="content1_text">{{ post_contents[8]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
