@@ -34,8 +34,8 @@
       <div class="wrapper2">
         <div class="wrapper3">
           <div class="contents_top">
-            <a class="other">ほかの夢</a>
-            <a class="my">自分の夢</a>
+            <a class="other">おすすめ順</a>
+            <a class="my">更新順</a>
           </div>
           <div class="contents">
 
@@ -58,8 +58,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[0]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[0]['comment'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[0]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[0]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>
@@ -70,8 +70,8 @@
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[1]['image_name']) }}">
-                  <p class="content1_text">{{ post_contents[1]['comment'] }}</p>
+                  <img class="content1_img" src="{{ url_for('static', filename=post_contents[rnumbers[1]]['image_name']) }}">
+                  <p class="content1_text">{{ post_contents[rnumbers[1]]['comment'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
                     <p class="content1_username">ユーザーネーム</p>

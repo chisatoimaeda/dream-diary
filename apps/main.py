@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 # from flask_migrate import Migrate
 import os
 from werkzeug.utils import secure_filename
+import random
 # import datetime
 
 
@@ -24,10 +25,18 @@ post_contents = [{'image_name': "", 'comment': 'N/A', 'username': 'N/A'} for _ i
 def home():
     return render_template('home.html')
 
+# def random_order_index(num, registered):
+#     ls = random.sample(range(num), num)
+#     ls2 = []
+#     for n in ls:
+#         if n < registered:
+#             ls2.append()
+
 
 @app.route('/personal')
 def personal():
-    return render_template('yume_timeline.html', post_contents=post_contents, post_num=post_num)
+    random_numbers = random.sample(range(10), 10)
+    return render_template('yume_timeline.html', post_contents=post_contents, post_num=post_num, rnumbers=random_numbers)
 
 # @app.route('/', methods=["POST"])
 # def post():
