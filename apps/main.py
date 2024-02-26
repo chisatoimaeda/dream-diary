@@ -25,7 +25,6 @@ post_contents = [{'image_name': "", 'comment': 'N/A', 'username': 'N/A'} for _ i
 def home():
     return render_template('home.html')
 
-
 # def random_order_index(num, registered):
 #     ls = random.sample(range(num), num)
 #     ls2 = []
@@ -38,7 +37,6 @@ def home():
 def personal():
     random_numbers = random.sample(range(10), 10)
     return render_template('yume_timeline.html', post_contents=post_contents, post_num=post_num, rnumbers=random_numbers)
-
 
 # @app.route('/', methods=["POST"])
 # def post():
