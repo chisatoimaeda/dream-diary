@@ -5,9 +5,9 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-# 投稿できる数は固定とする
+# 投稿できる数は10個で固定とする
 post_num = 0
-descriptions = ["N/A" for _ in range(10)]
+post_contents = [{'image': "N/A", 'description': 'N/A', 'username': 'N/A'} for _ in range(10)]
 
 
 # app.config.from_pyfile('settings.py')
@@ -19,16 +19,19 @@ descriptions = ["N/A" for _ in range(10)]
 
 @app.route('/')
 def home():
-    return render_template('yume_timeline.html', descriptions=descriptions)
+    return render_template('yume_timeline.html', post_contents=post_contents)
 
 
 @app.route('/', methods=["POST"])
 def post():
-    global post_num, descriptions
-    descriptions[post_num] = request.form.get('description')
+    global post_num, post_contents
+    post_contents[post_num]['description'] = request.form.get('description')
+
+    # 投稿ボタンが押された時の処理(画像生成)
+    # img = 画像生成処理
+    # post_contents[post_num]['image'] = img
+    # print(post_contents[post_num]['description'])
     post_num += 1
-    # 投稿ボタンが押された時の処理
-    print(descriptions)
     return redirect('/')
 
 
