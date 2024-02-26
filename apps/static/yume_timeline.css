@@ -88,7 +88,7 @@ main {
   margin: 5vw 5vw 0 5vw;
 }
 
-.sinnkitoukou_contents input {
+.sinnkitoukou_contents textarea {
   width: 60vw;
   height: 35vw;
   background-color: transparent;
