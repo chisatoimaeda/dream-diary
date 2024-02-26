@@ -105,7 +105,7 @@ input::placeholder {
   font-size: 20px;
 }
 
-.sinnkitoukou_shadow{
+.sinnkitoukou_shadow {
   width: 100vw;
   height: 100vh;
   background-color: black;
@@ -161,8 +161,6 @@ input::placeholder {
   height: 115vw;
   margin: 0;
   background-image: url(Frameimg.png);
-  background-repeat: no-repeat;
-  height: 115vw;
   background-size: 100%;
   border: 2px solid white;
 }
