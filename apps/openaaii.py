@@ -13,7 +13,7 @@ import sys
 import shutil
 import requests
 DEEP_API_KEY ='55b8d148-cc17-4279-a736-2eb0c362e6ca:fx'
-api_key='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'
+api_key='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'
 
 text = mainfile.description
 source_lang='JA'
