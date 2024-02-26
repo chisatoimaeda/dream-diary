@@ -22,8 +22,12 @@ post_contents = [{'image_name': "", 'description': 'N/A', 'username': 'N/A'} for
 
 @app.route('/')
 def home():
-    return render_template('yume_timeline.html', post_contents=post_contents, post_num=post_num)
+    return render_template('home.html')
 
+
+@app.route('/personal')
+def personal():
+    return render_template('yume_timeline.html', post_contents=post_contents, post_num=post_num)
 
 # @app.route('/', methods=["POST"])
 # def post():
@@ -38,7 +42,7 @@ def home():
 #     return redirect('/')
 
 
-@app.route('/upload', methods=["POST"])
+@app.route('/personal/upload', methods=["POST"])
 def upload():
     global post_num, post_contents
 
@@ -59,19 +63,19 @@ def upload():
     # print(post_contents[post_num]['description'])
 
     post_num += 1
-    return redirect('/')
+    return redirect('/personal')
 
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        input_username = request.form.get('input_username')
-        input_email = request.form.get('input_email')
-        if input_username == "admin" and input_email == "abcd1234":
-            return redirect(url_for("https://www.google.co.jp/"))
-        else:
-            return render_template('login.html', message="Login failure. Please try again.")
-    return render_template('home.html')
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     if request.method == 'POST':
+#         input_username = request.form.get('input_username')
+#         input_email = request.form.get('input_email')
+#         if input_username == "admin" and input_email == "abcd1234":
+#             return redirect(url_for("https://www.google.co.jp/"))
+#         else:
+#             return render_template('login.html', message="Login failure. Please try again.")
+#     return render_template('home.html')
 
 
 # @app.route('/<username>')

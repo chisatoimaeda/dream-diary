@@ -7,21 +7,6 @@
 
 <body>
   <main>
-    <div class="userprofile">
-      <div class="userprofile_wrapper">
-        <div class="backbutton2_wrapper">
-          <p>←</p>
-        </div>
-        <div class="userprofile_contents">
-          <input class="userimage" type="image">
-          <input class="userinformation" type="text" placeholder="ユーザー名">
-          <input class="userinformation" type="text" placeholder="メールアドレス">
-        </div>
-        <button class="henkou_button">
-          変更する
-        </button>
-      </div>
-    </div>
     <div class="sinnkitoukou_shadow">
 
     </div>
@@ -32,7 +17,7 @@
         </div>
         <div class="sinnkitoukou_contents">
 <!--          <img href="">-->
-          <form action="/upload" method="POST" enctype="multipart/form-data">
+          <form action="/personal/upload" method="POST" enctype="multipart/form-data">
             <div class="select_image">
               <label for="file">アップロード</label>
               <input type="file" name="file">
@@ -336,16 +321,12 @@
       let $backbutton_wrapper = document.getElementsByClassName("backbutton_wrapper")[0];
       let $extrabutton_title = document.getElementsByClassName("extrabutton_title")[0];
       let $sinnkitoukou_shadow = document.getElementsByClassName("sinnkitoukou_shadow")[0];
-      let $settei = document.getElementsByClassName("settei")[0];
-      let $userprofile = document.getElementsByClassName("userprofile")[0];
-      let $backbutton2_wrapper = document.getElementsByClassName("backbutton2_wrapper")[0];
       $contents2.classList.toggle("none");
       $other.classList.toggle("on");
       $my.classList.toggle("off");
       $yumebutton.classList.toggle("none");
       $sinnkitoukou.classList.toggle("none");
       $sinnkitoukou_shadow.classList.toggle("none");
-      $userprofile.classList.toggle("none");
       reset_styles = function () {
         $other.classList.remove("on");
         $other.classList.remove("off");
@@ -379,14 +360,6 @@
       $extrabutton_title.addEventListener("click", function () {
         $sinnkitoukou.classList.remove("none");
         $sinnkitoukou_shadow.classList.remove("none");
-      });
-      $settei.addEventListener("click", function () {
-        $userprofile.classList.remove("none");
-        $sinnkitoukou_shadow.classList.remove("none");
-      });
-      $backbutton2_wrapper.addEventListener("click", function () {
-        $userprofile.classList.toggle("none");
-        $sinnkitoukou_shadow.classList.toggle("none");
       });
 
     });
