@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # 投稿できる数は10個で固定とする
 post_num = 0
-post_contents = [{'image_path': "", 'description': 'N/A', 'username': 'N/A'} for _ in range(10)]
+post_contents = [{'image_name': "", 'description': 'N/A', 'username': 'N/A'} for _ in range(10)]
 
 
 # app.config.from_pyfile('settings.py')
@@ -47,11 +47,12 @@ def upload():
     file_name = secure_filename(file.filename)
     file_path = os.path.join('static/', file_name)
     file.save(file_path)
-    post_contents[post_num]['image_path'] = file_path
-    print(post_contents[post_num]['image_path'])
+    post_contents[post_num]['image_name'] = file_name
+    print(post_contents[post_num]['image_name'])
 
     # 投稿した文章に対する処理
     post_contents[post_num]['description'] = request.form.get('description')
+
     # 投稿ボタンが押された時の処理(画像生成)
     # img = 画像生成処理
     # post_contents[post_num]['image'] = img
@@ -70,12 +71,13 @@ def login():
             return redirect(url_for("https://www.google.co.jp/"))
         else:
             return render_template('login.html', message="Login failure. Please try again.")
-    return render_template('login.html')
+    return render_template('home.html')
 
 
 # @app.route('/<username>')
 # def personal(username):
 #     return render_template('yume_timeline.html', username=username)
+
 
 # @app.route('/', methods=['GET'])
 # def get():
