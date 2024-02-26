@@ -57,7 +57,7 @@ main {
   margin: 0;
   color: white;
   font-weight: bold;
-  position:absolute;
+  position: absolute;
   opacity: 1 !important;
   z-index: 100 !important;
 }
@@ -105,7 +105,7 @@ input::placeholder {
   font-size: 20px;
 }
 
-.sinnkitoukou_shadow{
+.sinnkitoukou_shadow {
   width: 100vw;
   height: 100vh;
   background-color: black;
@@ -151,7 +151,7 @@ input::placeholder {
   margin: 0;
   color: white;
   font-weight: bold;
-  position:absolute;
+  position: absolute;
   opacity: 1 !important;
   z-index: 100 !important;
 }
@@ -160,7 +160,7 @@ input::placeholder {
   width: 70vw;
   height: 115vw;
   margin: 0;
-  background-image: url(image\ 4.png);
+  background-image: url(Frameimg.png);
   background-size: 100%;
   border: 2px solid white;
 }
@@ -201,7 +201,7 @@ input::placeholder {
   align-items: center;
 }
 
-.wrapper2  {
+.wrapper2 {
   width: 90vw;
   height: 90vh;
   border: 1px solid white;
@@ -209,7 +209,7 @@ input::placeholder {
   justify-content: center;
 }
 
-.wrapper3  {
+.wrapper3 {
   width: 80vw;
   height: 90vh;
 }
@@ -359,7 +359,7 @@ input::placeholder {
   flex-direction: column;
 }
 
-.extrabutton_title{
+.extrabutton_title {
   width: 38vw;
   height: 70vw;
   display: flex;
@@ -406,6 +406,7 @@ input::placeholder {
 }
 
 .settei {
+  z-index: 100;
   width: 6vh;
   height: 6.5vh;
   background-image: url(Icon.png);
