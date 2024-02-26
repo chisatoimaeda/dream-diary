@@ -16,10 +16,14 @@
           <p>←</p>
         </div>
         <div class="sinnkitoukou_contents">
-          <img href="">
-          <form action="/" method="POST">
+<!--          <img href="">-->
+          <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="select_image">
+              <label for="file">アップロード</label>
+              <input type="file" name="file">
+            </div>
             <textarea name="description"></textarea>
-            <button class="sinnkitoukou_button">
+            <button type="submit" class="sinnkitoukou_button">
               投稿する
             </button>
           </form>
@@ -34,10 +38,27 @@
             <a class="my">自分の夢</a>
           </div>
           <div class="contents">
+
+<!--            {% for post in post_contents %}-->
+<!--            <div class="content1">-->
+<!--              <div class="content1_wrapper">-->
+<!--                <div class="content1_wrapper2">-->
+<!--                  <img class="content1_img" href="">-->
+<!--                  <p class="content1_text">{{ post['description'] }}</p>-->
+<!--                  <div class="content1_user">-->
+<!--                    <img class="content1_userimg">-->
+<!--                    <p class="content1_username">ユーザーネーム</p>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            {% endfor %}-->
+
+
             <div class="content1">
               <div class="content1_wrapper">
                 <div class="content1_wrapper2">
-                  <img class="content1_img" href="">
+                  <img class="content1_img" href="{{ post_contents[0]['image_path'] }}">
                   <p class="content1_text">{{ post_contents[0]['description'] }}</p>
                   <div class="content1_user">
                     <img class="content1_userimg">
